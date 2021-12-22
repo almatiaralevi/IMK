@@ -1,0 +1,116 @@
+@font-face {
+    font-family: fonts;
+    src: url(../LoginTest/TisaSansPro-Regular.ttf);
+}
+.spanTest{
+    font-family: Cinzel;
+
+}
+.nvgAtas{
+    display : flex;
+    background-color: #60412B;
+    justify-content: space-between;
+}
+.navKanan{
+    justify-content: space-around;
+
+}
+.nvgKanan>a{
+    text-align: center;
+}
+.nvgAtas img{
+    width: 75px;
+    border-radius: 50%;
+    margin: 10px;
+}
+body{
+    margin:0px;
+}
+.navKanan a{
+    text-align: center;
+}
+
+.navbar-custom{
+    background-color: #fcdec0;
+    /* font-family: Tisa; */
+}
+
+.navbar-nav i{
+    margin-top: 12px;
+    align-items: center;
+}
+
+ .aNav {
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+  }
+   .aNacACT :active{
+      background-color: #60412B;
+  }
+
+.aNav.effect-underline:after {
+content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 22px;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
+}
+
+.aNav.effect-underline:hover:after {
+  opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.logo{
+   width: 100px;
+   height: 100px;
+}
+.LogoFAQ{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+/* Bagian Footer */
+#button-addon1 {
+    color: #ffc371;
+  }
+  
+  .FIcon {
+    color: #ffc371;
+  }
+  
+  .form-control::placeholder {
+    font-size: 0.95rem;
+    color: #aaa;
+    font-style: italic;
+  }
+  
+  .form-control.shadow-0:focus {
+    box-shadow: none;
+  }
+  .footerFonts{
+      font-family: fonts;
+  }
+  .textFaq{
+      justify-content: center;
+      text-align: left;
+      align-items: center;
+  }
+  .borderCustom{
+      border-top-color: black;
+  }
+  

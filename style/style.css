@@ -1,0 +1,224 @@
+@font-face {
+  font-family: fonts;
+  src: url(../TisaSansPro-Regular.ttf);
+}
+.spanTest{
+  font-family: Cinzel;
+}
+.textIcon{
+  font-family: fonts;
+}
+.nvgAtas{
+  display : flex;
+  background-color: #60412B;
+  justify-content: space-between;
+}
+.navKanan{
+  justify-content: space-around;
+
+}
+.nvgKanan>a{
+  text-align: center;
+}
+.nvgAtas img{
+  width: 75px;
+  border-radius: 50%;
+  margin: 10px;
+}
+body{
+  margin:0px;
+}
+.navKanan a{
+  text-align: center;
+}
+
+.navbar-custom{
+  background-color: #fcdec0;
+  font-family: Tisa;
+}
+
+.navbar-nav i{
+  margin-top: 12px;
+  align-items: center;
+}
+
+.aNav {
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+ .aNacACT :active{
+    background-color: #60412B;
+}
+
+.aNav.effect-underline:after {
+content: '';
+position: absolute;
+left: 0;
+display: inline-block;
+height: 22px;
+width: 100%;
+border-bottom: 1px solid;
+margin-top: 10px;
+opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0,1);
+  transform: scale(0,1);
+}
+
+.aNav.effect-underline:hover:after {
+opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.logo{
+ width: 100px;
+ height: 100px;
+}
+
+ .btn-primary.custom-btn {
+    background-color: #b37c57;
+    border-color: #60412B;
+  }
+  .btn-primary.custom-btn:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: black;
+    background-color: #9c6c49;
+    border-color: #60412B;
+}
+
+.card {
+  max-width: 1000px;
+  padding: 4rem;
+  background-color: #e3c099!important;
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.footerFonts{
+  font-family: fonts;
+}
+
+@media(max-width:768px) {
+  .card {
+      width: 100%;
+      padding: 1.5rem
+  }
+}
+
+.row {
+  margin: 0
+}
+
+.path {
+  color: grey;
+  margin-bottom: 1rem
+}
+
+.path a {
+  color: #ffffff
+}
+
+.info {
+  padding: 6vh 0vh
+}
+
+.FIcon {
+  color: #ffc371;
+}
+
+img {
+  width: 70%;
+  padding: 1rem;
+}
+
+@media(max-width:768px) {
+  img {
+      padding: 2.5rem 0
+  }
+}
+
+.title .col {
+  padding: 0
+}
+
+.fa-heart-o {
+  font-size: 2rem;
+  color: #ffffffaf;
+  font-weight: lighter
+}
+
+#reviews {
+  margin-left: 3vh;
+  color: grey
+}
+
+.price {
+  margin-top: 5px;
+  width: 200%;
+}
+
+label.radio span {
+  padding: 1vh 4vh;
+  background-color: rgb(54, 54, 54);
+  color: grey;
+  display: inline-block;
+  margin-right: 2vh
+}
+
+label.radio input:checked+span {
+  border: 1px solid white;
+  padding: 1vh 4vh;
+  background-color: rgb(54, 54, 54);
+  margin-right: 2vh;
+  color: #ffffff;
+  display: inline-block
+}
+
+.carousel-control-prev {
+  width: unset
+}
+
+.carousel-control-next {
+  left: 8vh;
+  right: unset;
+  width: unset
+}
+
+.lower {
+  margin-top: 3rem
+}
+
+.lower i {
+  padding: 2.5vh;
+  margin-right: 1vh;
+  color: grey;
+  border: 1px solid rgb(85, 85, 85)
+}
+
+.lower .col {
+  padding: 0
+}
+
+@media(max-width:768px) {
+  .lower i {
+      padding: 2vh;
+      margin-right: 1vh;
+      color: grey;
+      border: 1px solid rgb(85, 85, 85)
+  }
+}
+
+
+
+
+  
+  
+  
+   
+

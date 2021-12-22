@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style/searchSort.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="javascript/searchSort.js"></script>
+    <link rel="stylesheet" href="style/stylekatalog.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0fb66aaa65.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <title>Katalog | JOJEBRY</title>
+</head>
+
+<body>
+    <!--Bagian Navbar-->
+    <div class="navbar-custom" style="display: flex;">
+
+        <div class="" style="flex: 1">
+            <img src="img/LogoJonRemoved.png" class="rounded-circle logo" alt="Responsive image">
+            <span class="w3-text-theme spanTest" style="font-weight: bold; font-size: 30px; color: #b37c57;">JOJEBRY</span>
+        </div>
+        <!-- Icon Navigation -->
+        <div class="navbar navbar-expand-sm navbar-light" style="margin-right: 90px;">
+            <ul class="navbar-nav" style="margin-right: 5px;">
+                <li class="nav-item"><a href="cart.html" class="aNav nav-link text-dark effect-underline textIcon"><i class="fa fa-shopping-cart"></i>
+                        Keranjang</a></li>
+                <li class="nav-item"><a href="login.html" class="aNav nav-link text-dark effect-underline textIcon"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                <li class="nav-item"><a href="Katalog.html" class="aNav nav-link text-dark effect-underline textIcon"><i class="fa fas fa-book"></i>
+                        Katalog</a></li>
+                <li class="nav-item"><a href="faq.html" class="aNav nav-link text-dark effect-underline textIcon" id="faqAct"><i class="fa fa-question-circle"></i>
+                        FAQ</a></li>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal -->
+<!-- Modal Subscribe Email -->
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Thank You!!</h5>
+            </div>
+            <div class="modal-body">
+                <p>Terimakasih sudah menjadi bagian dari pelanggan setia JOJEBRY</p>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Tambah Keranjang -->
+<div id="modalAddCart" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Berhasil!</h5>
+            </div>
+            <div class="modal-body">
+                <p>Barang berhasil ditambahkan ke keranjang belanja.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="cart.html" class="btn btn-sm btn-primary custom-btn" >Lihat Keranjang Belanja</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Bagian searching bar dan sorting -->
+    <div class="topnav">
+        <div class="search-container">
+            <input type="text" id="pencarian" placeholder="Pencarian..." name="search">
+            <button onclick="mySearch()"><i class="fa fa-search"></i></button>
+        </div>  
+      </div>
+      <div class="dropdown">
+        <button onclick="mySort()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="Katalog.html">All</a>
+          <a href="KatalogAbjadNaik.html">Urutkan Judul A-Z</a>
+          <a href="KatalogAbjadTurun.html">Urutkan Judul Z-A</a>
+          <a href="KatalogAuthorNaik.html">Urutkan Pengarang A-Z</a>
+          <a href="KatalogAuthorTurun.html">Urutkan Pengarang Z-A</a>
+          <a href="KatalogRatingNaik.html">Urutkan dari Rating Tertinggi</a>
+          <a href="KatalogRatingTurun.html">Urutkan dari Rating Terendah</a>
+        </div>
+      </div>
+     
+   <div class="container-fluid mt-3">
+        <h2 style="margin-top: 15px; text-align:center ; margin-bottom: 30px;" class="topText">Katalog</h2>
+            
+            <h3> </h3>
+            
+            <div class="row mb-5">
+                <div class="col-md-2 mb-4">
+                    <div class="card">
+                        <img src="img/laskarpelangi.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-truncate">Laskar Pelangi</h5>
+                            <p class="card-text">Rp. 75.000,00</p>
+                            <p class="card-text"style="margin-top: -10px;">Author: Andrea Hirata</p>
+                            <p class="card-text"style="margin-top: -10px;">Rating: 5.0 / 5.0 </p>
+                            <p class="card-text"style="margin-top: -10px;">ISBN: 9793062797</p>
+                            <a href="#" class="btn btn-sm btn-primary custom-btn">Rincian</a>
+                            <a href="#" class="btn btn-sm btn-primary custom-btn" data-toggle="modal" data-target="#modalAddCart">+ Keranjang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card">
+                        <img src="img/eragon.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-truncate">Eragon</h5>
+                            <p class="card-text">Rp. 75.000,00</p>
+                            <p class="card-text"style="margin-top: -10px;">Author: Christopher Pao</p>
+                            <p class="card-text"style="margin-top: -10px;">Rating: 3.0 / 5.0 </p>
+                            <p class="card-text"style="margin-top: -10px;">ISBN: 9780375826696</p>
+                            <a href="#" class="btn btn-sm btn-primary custom-btn" >Rincian</a>
+                            <a href="#" class="btn btn-sm btn-primary custom-btn" data-toggle="modal" data-target="#modalAddCart">+ Keranjang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card">
+                        <img src="img/powerofbroke.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-truncate">The Power of Broke</h5>
+                            <p class="card-text">Rp. 207.000,00</p>
+                            <p class="card-text"style="margin-top: -10px;">Author: Daymond John</p>
+                            <p class="card-text"style="margin-top: -10px;">Rating: 3.0 / 5.0 </p>
+                            <p class="card-text"style="margin-top: -10px;">ISBN: 9781101903599</p>
+                            <a href="#" class="btn btn-sm btn-primary custom-btn">Rincian</a>
+                            <a href="#" class="btn btn-sm btn-primary custom-btn" data-toggle="modal" data-target="#modalAddCart">+ Keranjang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-2">
+                    <div class="card">
+                        <img src="img/goodneighbor.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-truncate">Good Neighbor</h5>
+                            <p class="card-text">Rp. 99.000,00</p>
+                            <p class="card-text"style="margin-top: -10px;">Author: Honey Dee</p>
+                            <p class="card-text"style="margin-top: -10px;">Rating: 3.0 / 5.0 </p>
+                            <p class="card-text"style="margin-top: -10px;">ISBN: 9786236197486</p>
+                            <a href="#" class="btn btn-sm btn-primary custom-btn">Rincian</a>
+                            <a href="#" class="btn btn-sm btn-primary custom-btn" data-toggle="modal" data-target="#modalAddCart">+ Keranjang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-2">
+                    <div class="card">
+                        <img src="img/koleksiprogramdatabasepython.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-truncate">Koleksi Program Database Python</h5>
+                            <p class="card-text">Rp. 60.000,00</p>
+                            <p class="card-text"style="margin-top: -10px;">Author: Ir. Yuniar Supardi</p>
+                            <p class="card-text"style="margin-top: -10px;">Rating: 2.5 / 5.0 </p>
+                            <p class="card-text"style="margin-top: -10px;">ISBN: 9786230027109</p>
+                            <a href="#" class="btn btn-sm btn-primary custom-btn">Rincian</a>
+                            <a href="#" class="btn btn-sm btn-primary custom-btn" data-toggle="modal" data-target="#modalAddCart">+ Keranjang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-2">
+                    <div class="card">
+                        <img src="img/zorro.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-truncate">Zorro</h5>
+                            <p class="card-text">Rp. 140.000,00</p>
+                            <p class="card-text"style="margin-top: -10px;">Author: Sally Rooney</p>
+                            <p class="card-text"style="margin-top: -10px;">Rating: 3.0 / 5.0 </p>
+                            <p class="card-text"style="margin-top: -10px;">ISBN: 9781984822178</p>
+                            <a href="#" class="btn btn-sm btn-primary custom-btn">Rincian</a>
+                            <a href="#" class="btn btn-sm btn-primary custom-btn" data-toggle="modal" data-target="#modalAddCart">+ Keranjang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <div class="card">
+                        <img src="img/belajarjavanetbeans.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-truncate">Belajar Java, Netbeans, dan Database dari Nol</h5>
+                            <p class="card-text">Rp. 80.000,00</p>
+                            <p class="card-text"style="margin-top: -10px;">Author: Jubilee Enterprise</p>
+                            <p class="card-text"style="margin-top: -10px;">Rating: 3.5 / 5.0 </p>
+                            <p class="card-text"style="margin-top: -10px;">ISBN: 9786020288475</p>
+                            <a href="belajar-java-netbeans-database-dari-nol.html" class="btn btn-sm btn-primary custom-btn" >Rincian</a>
+                            <a href="#" class="btn btn-sm btn-primary custom-btn" data-toggle="modal" data-target="#modalAddCart">+ Keranjang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-2">
+                        <div class="card">
+                            <img src="img/johnlennonthelife.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title text-truncate">John Lennon: The Life</h5>
+                                <p class="card-text">Rp. 180.000,00</p>
+                                <p class="card-text"style="margin-top: -10px;">Author: Philip Norman</p>
+                                <p class="card-text"style="margin-top: -10px;">Rating: 4.0 / 5.0 </p>
+                                <p class="card-text"style="margin-top: -10px;">ISBN: 9780060754013</p>
+                                <a href="#" class="btn btn-sm btn-primary custom-btn">Rincian</a>
+                                <a href="#" class="btn btn-sm btn-primary custom-btn" data-toggle="modal" data-target="#modalAddCart">+ Keranjang</a>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card">
+                        <img src="img/dilan.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-truncate">Dilan</h5>
+                            <p class="card-text">Rp. 80.000,00</p>
+                            <p class="card-text"style="margin-top: -10px;">Author: Pidi Baiq</p>
+                            <p class="card-text"style="margin-top: -10px;">Rating: 4.5 / 5.0 </p>
+                            <p class="card-text"style="margin-top: -10px;">ISBN: 9786027870413</p>
+                            <a href="#" class="btn btn-sm btn-primary custom-btn">Rincian</a>
+                            <a href="#" class="btn btn-sm btn-primary custom-btn" data-toggle="modal" data-target="#modalAddCart">+ Keranjang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-2">
+                    <div class="card">
+                        <img src="img/normalpeople.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-truncate">Normal People</h5>
+                            <p class="card-text">Rp. 65.000,00</p>
+                            <p class="card-text"style="margin-top: -10px;">Author: Roald Dahl</p>
+                            <p class="card-text"style="margin-top: -10px;">Rating: 3.5 / 5.0 </p>
+                            <p class="card-text"style="margin-top: -10px;">ISBN: 9780375826696</p>
+                            <a href="#" class="btn btn-sm btn-primary custom-btn">Rincian</a>
+                            <a href="#" class="btn btn-sm btn-primary custom-btn" data-toggle="modal" data-target="#modalAddCart">+ Keranjang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card">
+                        <img src="img/it.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-truncate">It</h5>
+                            <p class="card-text">Rp. 180.000,00</p>
+                            <p class="card-text" style="margin-top: -10px;">Author: Stephen King</p>
+                            <p class="card-text"style="margin-top: -10px;">Rating: 4.0 / 5.0 </p>
+                            <p class="card-text"style="margin-top: -10px;">ISBN: 9780450411434</p>
+                            <a href="#" class="btn btn-sm btn-primary custom-btn">Rincian</a>
+                            <a href="#" class="btn btn-sm btn-primary custom-btn" data-toggle="modal" data-target="#modalAddCart">+ Keranjang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card">
+                        <img src="img/herperfectfamily.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-truncate">Her Perfect Family</h5>
+                            <p class="card-text">Rp. 130.000,00</p>
+                            <p class="card-text" style="margin-top: -10px;">Author: Teresa Driscoll</p>
+                            <p class="card-text"style="margin-top: -10px;">Rating: 3.5 / 5.0 </p>
+                            <p class="card-text"style="margin-top: -10px;">ISBN: 9781542028752</p>
+                            <a href="#" class="btn btn-sm btn-primary custom-btn">Rincian</a>
+                            <a href="#" class="btn btn-sm btn-primary custom-btn" data-toggle="modal" data-target="#modalAddCart">+ Keranjang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            
+            </div>
+        </div>  
+
+<!--Bagian Footer-->
+<footer class="bg-light borderCustom">
+    <div class="container py-5">
+      <div class="row py-4">
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <p class="font-italic footerFonts">Toko Buku JOJEBRY merupakan toko buku nomor 1 di Bandung</p>
+          <ul class="list-inline mt-4">
+            <li class="list-inline-item"><a href="https://twitter.com/?lang=en" target="_blank" title="twitter"><i class="fa fa-twitter FIcon"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/" target="_blank" title="facebook"><i class="fa fa-facebook FIcon"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank" title="instagram"><i class="fa fa-instagram FIcon"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.pinterest.com/" target="_blank" title="pinterest"><i class="fa fa-pinterest FIcon"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4 footerFonts">Customer Support</h6>
+          <ul class="list-unstyled mb-0">
+            <h6 class="footerFonts font-weight-bold">Call Us</h6>
+            <li class="mb-2"><a class="text-dark footerFonts">081221099589</a></li>
+            <h6 class="footerFonts font-weight-bold">WhatsApp kami</h6>
+            <a href="https://wa.me/081221099589" target="_blank" class="text-dark footerFonts">Klik ini</a>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4 footerFonts">Subscribe</h6>
+          <p class="text-dark mb-4 footerFonts">Dapatkan berita-berita terkini tentang Toko Buku JOJEBRY</p>
+          <div class="p-1 rounded border">
+            <div class="input-group">
+              <input type="email"  class="border border-dark" placeholder="Enter your email address" aria-describedby="button-addon1" class="form-control border-0 shadow-0">
+              <div class="input-group-append">
+                <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane FIcon"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyrights -->
+    <div class="bg-light py-4">
+      <div class="container text-center">
+        <p class="text-muted mb-0 py-2">© 2021 JOJEBRY All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

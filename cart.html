@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang</title>
+    <link rel="stylesheet" href="style/cart.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0fb66aaa65.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="style/cart.css">
+</head>
+<body>
+       <!--Bagian Navbar-->
+    <div class="navbar-custom" style="display: flex;">
+
+        <div class="" style="flex: 1">
+            <img src="img/LogoJonRemoved.png" class="rounded-circle logo" alt="Responsive image">
+            <span class="w3-text-theme spanTest" style="font-weight: bold; font-size: 30px; color: #b37c57;">JOJEBRY</span>
+        </div>
+        <!-- Icon Navigation -->
+        <div class="navbar navbar-expand-sm navbar-light" style="margin-right: 90px;">
+            <ul class="navbar-nav" style="margin-right: 5px;">
+                <li class="nav-item"><a href="cart.html" class="aNav nav-link text-dark effect-underline textIcon"><i class="fa fa-shopping-cart"></i>
+                        Keranjang</a></li>
+                <li class="nav-item"><a href="login.html" class="aNav nav-link text-dark effect-underline textIcon"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                <li class="nav-item"><a href="Katalog.html" class="aNav nav-link text-dark effect-underline textIcon"><i class="fa fas fa-book"></i>
+                        Katalog</a></li>
+                <li class="nav-item"><a href="faq.html" class="aNav nav-link text-dark effect-underline textIcon" id="faqAct"><i class="fa fa-question-circle"></i>
+                        FAQ</a></li>
+                </div>
+            </ul>
+        </div>
+    </div>
+</body>
+<body>
+
+
+<!-- Modal -->
+<!-- Modal Tambah Keranjang -->
+<div id="modalAddCart" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Pembayaran</h5>
+            </div>
+            <div class="modal-body">
+                <h5>Pilih Pembayaran</h5>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+					<label class="form-check-label" for="flexRadioDefault2">
+					  Gopay
+					</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+					<label class="form-check-label" for="flexRadioDefault2">
+					  OVO
+					</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+					<label class="form-check-label" for="flexRadioDefault2">
+					  ShopeePay
+					</label>
+				</div>
+            </div>
+            <div class="modal-footer">
+                <a href="checkout.html" class="btn btn-sm btn-primary custom-btn" >CHECKOUT</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+	<main class="page">
+	 	<section class="shopping-cart dark">
+	 		<div class="container">
+		        <div class="block-heading">
+		          <h2><b>Keranjang Belanja</b></h2>
+		        </div>
+		        <div class="content">
+	 				<div class="row">
+	 					<div class="col-md-12 col-lg-8">
+	 						<div class="items">
+				 				<div class="product">
+				 					<div class="row">
+					 					<div class="col-md-3">
+											<img src="img/zorro.jpg" class="card-img-top" alt="...">
+					 					</div>
+					 					<div class="col-md-8">
+					 						<div class="info">
+						 						<div class="row">
+							 						<div class="col-md-5 product-name">
+							 							<div class="product-name">
+															<br></br>
+								 							<a>Zorro</a>
+								 							<div class="product-info">
+									 							<div>Author: <span class="value">Isabel Allende</span></div>
+									 						</div>
+									 					</div>
+							 						</div>
+							 						<div class="col-md-4 quantity">
+														<br></br>
+							 							<label for="quantity">Jumlah Buku:</label>
+							 							<input id="quantity" type="number" value ="1" class="form-control quantity-input">
+							 						</div>
+							 						<div class="col-md-3 price">
+							 							<h6>Rp.65.000,00</h6>
+							 						</div>
+							 					</div>
+							 				</div>
+					 					</div>
+					 				</div>
+				 				</div>
+				 				<div class="product">
+									<div class="row">
+										<div class="col-md-3">
+										   <img src="img/it.jpg" class="card-img-top" alt="...">
+										</div>
+										<div class="col-md-8">
+											<div class="info">
+												<div class="row">
+													<div class="col-md-5 product-name">
+														<div class="product-name">
+															<br></br>
+															<a>IT</a>
+															<div class="product-info">
+																<div>Author: <span class="value">Stephen King</span></div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-4 quantity">
+														<br></br>
+														<label for="quantity">Jumlah Buku:</label>
+														<input id="quantity" type="number" value ="1" class="form-control quantity-input">
+													</div>
+													<div class="col-md-3 price">
+														<h6>Rp.180.000,00</h6>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="product">
+									<div class="row">
+										<div class="col-md-3">
+										   <img src="img/laskarpelangi.jpg" class="card-img-top" alt="...">
+										</div>
+										<div class="col-md-8">
+											<div class="info">
+												<div class="row">
+													<div class="col-md-5 product-name">
+														<div class="product-name">
+															<br></br>
+															<a>Laskar Pelangi</a>
+															<div class="product-info">
+																<div>Author: <span class="value">Andrea Hirata</span></div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-4 quantity">
+														<br></br>
+														<label for="quantity">Jumlah Buku:</label>
+														<input id="quantity" type="number" value ="1" class="form-control quantity-input">
+													</div>
+													<div class="col-md-3 price">
+														<h6>Rp.70.000,00</h6>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+				 			</div>
+			 			</div>
+			 			<div class="col-md-12 col-lg-4">
+			 				<div class="summary">
+			 					<h3>Subtotal</h3>
+			 					<div class="summary-item"><span class="text">Subtotal</span><span class="price">Rp. 305.000,00</span></div>
+			 					<div class="summary-item"><span class="text">Pajak</span><span class="price">Rp. 30.500,00</span></div>
+			 					<div class="summary-item" id="total"><span class="text">Total</span><span class="price">Rp. 335.500,00</span></div>
+								<br>
+			 					<a href="checkout.html" class="btn btn-primary custom-btn" role="button" data-toggle="modal" data-target="#modalAddCart">CHECKOUT</a>
+				 			</div>
+						</div>
+		 			</div> 
+		 		</div>
+	 		</div>
+
+
+
+<!--Bagian Footer-->
+<footer class="bg-light borderCustom">
+    <div class="container py-5">
+      <div class="row py-4">
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="img/logo.png" alt="" width="180" class="mb-3">
+          <p class="font-italic footerFonts">Toko Buku JOJEBRY merupakan toko buku nomor 1 di Bandung</p>
+          <ul class="list-inline mt-4">
+            <li class="list-inline-item"><a href="https://twitter.com/?lang=en" target="_blank" title="twitter"><i class="fa fa-twitter FIcon"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/" target="_blank" title="facebook"><i class="fa fa-facebook FIcon"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank" title="instagram"><i class="fa fa-instagram FIcon"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.pinterest.com/" target="_blank" title="pinterest"><i class="fa fa-pinterest FIcon"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4 footerFonts">Customer Support</h6>
+          <ul class="list-unstyled mb-0">
+            <h6 class="footerFonts font-weight-bold">Call Us</h6>
+            <li class="mb-2"><a class="text-dark footerFonts">081221099589</a></li>
+            <h6 class="footerFonts font-weight-bold">WhatsApp kami</h6>
+            <a href="https://wa.me/081221099589" target="_blank" class="text-dark footerFonts">Klik ini</a>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-lg-0">
+			<h6 class="text-uppercase font-weight-bold mb-4 footerFonts">Subscribe</h6>
+			<p class="text-dark mb-4 footerFonts">Dapatkan berita-berita terkini tentang Toko Buku JOJEBRY</p>
+			<div class="p-1 rounded border">
+			  <div class="input-group">
+				  <form id="myForm">
+				<input type="text" class="border border-dark" id="email" placeholder="Enter your email address" aria-describedby="button-addon1" class="form-control border-0 shadow-0">
+				  <button id="button-addon1 " type="reset" onclick="myFunction()" class="btn btn-link btn-lg " value="Reset form" data-toggle="modal" data-target="#myModal"><i id="myBtn" class="fa fa-paper-plane FIcon"></i></button>
+			  </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Copyrights -->
+    <div class="bg-light py-4">
+      <div class="container text-center">
+        <p class="text-muted mb-0 py-2">© 2021 JOJEBRY All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+		</section>
+	</main>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
